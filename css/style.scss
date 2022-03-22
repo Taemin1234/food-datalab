@@ -1,0 +1,417 @@
+$main-color: #333333;
+$main-color2: #1d2427;
+$theme-color: #f76d00;
+$sec-bg-color: #edf0f5;
+
+// normalize
+body {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  font-family: sans-serif, "Malgun Gothic", Helvetica, "Apple SD Gothic Neo";
+  background-color: $sec-bg-color;
+  color: $main-color;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+}
+body,
+input,
+textarea {
+  font-family: sans-serif, "Malgun Gothic", Helvetica, "Apple SD Gothic Neo";
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:link {
+  color: #fff;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  background-color: #f2f2f2;
+  margin: 20px 0;
+  border: 0;
+  height: 1px;
+  width: 100%;
+  float: inherit;
+}
+div {
+  box-sizing: border-box;
+}
+section {
+  width: 1152px;
+  min-width: 1152px;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+select {
+  height: 36px;
+  font-size: 14px;
+  padding: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  max-width: 165px;
+  background-color: #fff;
+  margin-right: 5px;
+}
+
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+
+//extend
+
+%flex-start {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+%flex-end {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+%flex-between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+// 내용 css
+
+header {
+  .nav-top-wrap {
+    background-color: $main-color;
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+
+    .nav-top {
+      @extend %flex-between;
+      width: 1152px;
+      min-width: 1152px;
+      height: 55px;
+      box-sizing: border-box;
+      margin: 0px auto;
+    }
+
+    .nav-left,
+    .nav-right {
+      @extend %flex-start;
+    }
+
+    .content-bar {
+      padding: 0 10px;
+    }
+
+    .admin-logo {
+      font-size: 16px;
+      color: #fff;
+      margin-right: 12px;
+    }
+
+    .nav-datalab {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  .nav-bottom {
+    background-color: $main-color2;
+    color: #9e9d9d;
+
+    .menu {
+      // color: #9e9d9d;
+      display: block;
+    }
+
+    .tab_admenu {
+      width: 1152px;
+      min-width: 1152px;
+      height: 40px;
+      box-sizing: border-box;
+      margin: 0px auto;
+
+      ul {
+        @extend %flex-start;
+        height: 100%;
+      }
+
+      li {
+        height: 100%;
+        padding: 12px 15px 10px;
+        font-size: 13px;
+        border-left: 1px solid #3d494e;
+      }
+
+      li:last-child {
+        border-right: 1px solid #3d494e;
+      }
+    }
+  }
+}
+
+.sec-1 {
+  padding: 44px 0 46px;
+
+  .title-wrap {
+    @extend %flex-start;
+  }
+
+  .datalab-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .datalab-subtitle {
+    font-size: 14px;
+    padding-top: 10px;
+    margin-left: 7px;
+  }
+
+  .select-wrap {
+    @extend %flex-between;
+    margin: 30px 0;
+
+    .option-select {
+      @extend %flex-start;
+      vertical-align: middle;
+
+      // 라디오 버튼
+
+      .container-radio {
+        display: block;
+        position: relative;
+        padding-left: 22px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .container-radio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+      }
+      .container-radio:hover input ~ .checkmark {
+        background-color: #fff;
+      }
+      .container-radio input:checked ~ .checkmark {
+        border: 1px solid #f76d00;
+        background-color: #f76d00;
+      }
+      .container-radio .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .container-radio input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .container-radio .checkmark:after {
+        top: 4px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+      }
+      textarea {
+        width: 100%;
+        padding: 16px;
+        border: 1px solid #e4e8eb;
+        background-color: #f9f9f9;
+        height: 200px;
+        resize: none;
+      }
+
+      .select-type {
+        padding: 5px;
+
+        ul {
+          @extend %flex-between;
+        }
+
+        li {
+          padding-right: 10px;
+        }
+      }
+
+      .option-content {
+        color: #747272;
+        height: 30px;
+        padding-top: 3px;
+        margin: 0 10px;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .rank-wrap {
+    position: relative;
+
+    .region {
+      width: 243px;
+      height: 445px;
+      padding: 0 10px 18px;
+      margin: 0 5px;
+      background-color: #fff;
+      border: solid 1px #c3cbd7;
+      border-radius: 3px;
+    }
+
+    .region-title {
+      width: 100%;
+      height: 80px;
+      font-size: 22px;
+      line-height: 89px;
+      text-align: center;
+
+      border-bottom: solid 1px #c3cbd7;
+    }
+
+    .food-rank {
+      position: relative;
+      width: 236px;
+      height: 310px;
+
+      margin: 10px 0;
+      padding: 0 10px;
+
+      li {
+        margin-top: 10px;
+
+        span {
+          color: $theme-color;
+        }
+      }
+
+      // 안쪽 슬라이드 화살표
+      .slick-arrow {
+        position: absolute;
+        top: 334px;
+        width: 10px;
+        height: 10px;
+
+        font-size: 0;
+        color: transparent;
+
+        border: solid 2px #929292;
+        transform: rotate(45deg);
+      }
+
+      .slick-prev {
+        left: 196px;
+
+        border-top: none;
+        border-right: none;
+      }
+
+      .slick-next {
+        right: -19px;
+
+        border-bottom: none;
+        border-left: none;
+      }
+    }
+
+    .btn-other {
+      @extend %flex-end;
+
+      p {
+        font-size: 13px;
+        margin: 10px 16px 10px 10px;
+      }
+    }
+
+    // 전체 슬라이드 화살표
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+
+      font-size: 0;
+      color: transparent;
+
+      width: 71px;
+      height: 71px;
+      border: solid 2px #929292;
+      transform: rotate(45deg);
+    }
+
+    .slick-prev {
+      left: -74px;
+      border-top: none;
+      border-right: none;
+    }
+
+    .slick-next {
+      right: -74px;
+      border-bottom: none;
+      border-left: none;
+    }
+  }
+}
+
+.active {
+  background-color: $theme-color;
+  color: #ffffff;
+}
