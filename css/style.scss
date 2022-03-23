@@ -1,9 +1,44 @@
 $main-color: #333333;
-$main-color2: #1d2427;
+$main-color2: #ffffff;
 $theme-color: #f76d00;
 $sec-bg-color: #edf0f5;
+$border-color: #c3cbd7;
 
-// normalize
+//extend
+
+%flex-start {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+%flex-end {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+%flex-between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+%border-setting {
+  border: solid 1px $border-color;
+  border-radius: 3px;
+}
+
+// normalize!
 body {
   margin-left: 0px;
   margin-top: 0px;
@@ -44,7 +79,7 @@ a:visited {
 }
 
 a:link {
-  color: #fff;
+  color: $main-color2;
 }
 
 ul,
@@ -79,7 +114,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 3px;
   max-width: 165px;
-  background-color: #fff;
+  background-color: $main-color2;
   margin-right: 5px;
 }
 
@@ -93,58 +128,35 @@ button {
   cursor: pointer;
 }
 
-//extend
-
-%flex-start {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-}
-
-%flex-end {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  align-items: center;
-  align-content: center;
-}
-
-%flex-between {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-}
-
 // 내용 css
+
+.active {
+  border-bottom: solid 2px $theme-color;
+  color: $theme-color;
+}
 
 header {
   .nav-top-wrap {
-    background-color: $main-color;
-    color: #fff;
+    background-color: $theme-color;
+    color: $main-color2;
+    border-bottom: 1px solid #f36c06;
 
     a {
-      color: #fff;
+      color: $main-color2;
     }
 
     .nav-top {
-      @extend %flex-between;
       width: 1152px;
       min-width: 1152px;
       height: 55px;
       box-sizing: border-box;
       margin: 0px auto;
+      align-content: center;
     }
 
-    .nav-left,
-    .nav-right {
+    .nav-left {
       @extend %flex-start;
+      height: 100%;
     }
 
     .content-bar {
@@ -153,22 +165,23 @@ header {
 
     .admin-logo {
       font-size: 16px;
-      color: #fff;
-      margin-right: 12px;
+      color: $main-color2;
+      margin-right: 10px;
+      padding-top: 7px;
     }
 
     .nav-datalab {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
     }
   }
 
   .nav-bottom {
     background-color: $main-color2;
-    color: #9e9d9d;
+    border-bottom: 1px solid #d8dee4;
+    color: #000;
 
     .menu {
-      // color: #9e9d9d;
       display: block;
     }
 
@@ -186,13 +199,15 @@ header {
 
       li {
         height: 100%;
-        padding: 12px 15px 10px;
-        font-size: 13px;
-        border-left: 1px solid #3d494e;
+        padding: 12px 0;
+        margin-right: 12px;
+        font-size: 14px;
+        font-weight: 600;
       }
 
-      li:last-child {
-        border-right: 1px solid #3d494e;
+      .menu {
+        display: block;
+        height: 100%;
       }
     }
   }
@@ -203,17 +218,19 @@ header {
 
   .title-wrap {
     @extend %flex-start;
+    border-bottom: 2px solid $border-color;
   }
 
   .datalab-title {
     font-size: 24px;
     font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: -1px;
+    padding-bottom: 10px;
   }
 
   .datalab-subtitle {
     font-size: 14px;
-    padding-top: 10px;
-    margin-left: 7px;
   }
 
   .select-wrap {
@@ -246,16 +263,16 @@ header {
         left: 0;
         height: 18px;
         width: 18px;
-        background-color: #fff;
-        border: 1px solid #ccc;
+        background-color: $main-color2;
+        border: 1px solid $border-color;
         border-radius: 50%;
       }
       .container-radio:hover input ~ .checkmark {
-        background-color: #fff;
+        background-color: $main-color2;
       }
       .container-radio input:checked ~ .checkmark {
-        border: 1px solid #f76d00;
-        background-color: #f76d00;
+        border: 1px solid $theme-color;
+        background-color: $theme-color;
       }
       .container-radio .checkmark:after {
         content: "";
@@ -274,9 +291,9 @@ header {
         background: white;
       }
       textarea {
+        @extend %border-setting;
         width: 100%;
         padding: 16px;
-        border: 1px solid #e4e8eb;
         background-color: #f9f9f9;
         height: 200px;
         resize: none;
@@ -299,7 +316,8 @@ header {
         height: 30px;
         padding-top: 3px;
         margin: 0 10px;
-        font-weight: bolder;
+        opacity: 0.5;
+        font-weight: bold;
       }
     }
   }
@@ -308,13 +326,12 @@ header {
     position: relative;
 
     .region {
+      @extend %border-setting;
       width: 243px;
       height: 445px;
       padding: 0 10px 18px;
       margin: 0 5px;
-      background-color: #fff;
-      border: solid 1px #c3cbd7;
-      border-radius: 3px;
+      background-color: $main-color2;
     }
 
     .region-title {
@@ -324,7 +341,7 @@ header {
       line-height: 89px;
       text-align: center;
 
-      border-bottom: solid 1px #c3cbd7;
+      border-bottom: solid 1px $border-color;
     }
 
     .food-rank {
@@ -339,45 +356,28 @@ header {
         margin-top: 10px;
 
         span {
+          display: inline-block;
+          width: 23px;
+          margin-right: 5px;
           color: $theme-color;
         }
-      }
-
-      // 안쪽 슬라이드 화살표
-      .slick-arrow {
-        position: absolute;
-        top: 334px;
-        width: 10px;
-        height: 10px;
-
-        font-size: 0;
-        color: transparent;
-
-        border: solid 2px #929292;
-        transform: rotate(45deg);
-      }
-
-      .slick-prev {
-        left: 196px;
-
-        border-top: none;
-        border-right: none;
-      }
-
-      .slick-next {
-        right: -19px;
-
-        border-bottom: none;
-        border-left: none;
       }
     }
 
     .btn-other {
       @extend %flex-end;
+      height: 20px;
+      margin-bottom: 5px;
+      margin-right: 12px;
+
+      i {
+        cursor: pointer;
+        font-size: 15px;
+      }
 
       p {
-        font-size: 13px;
-        margin: 10px 16px 10px 10px;
+        font-size: 15px;
+        margin: 10px;
       }
     }
 
@@ -409,9 +409,121 @@ header {
       border-left: none;
     }
   }
-}
 
-.active {
-  background-color: $theme-color;
-  color: #ffffff;
+  .index-box-wrap {
+    @extend %border-setting;
+    width: 100%;
+    height: 270px;
+    background-color: #fff;
+    margin: 30px 0;
+
+    .index-box {
+      padding: 20px;
+      width: 100%;
+      height: 209px;
+      border-bottom: solid 1px $border-color;
+    }
+
+    .btn-submit {
+      display: block;
+      width: 100%;
+      height: 59px;
+      background-color: $sec-bg-color;
+      text-align: center;
+
+      span,
+      i {
+        line-height: 59px;
+        font-size: 16px;
+        font-weight: bold;
+        color: $theme-color;
+      }
+    }
+  }
+
+  .insight-box-wrap {
+    @extend %flex-between;
+    width: 100%;
+    height: 880px;
+
+    .clicked-food {
+      color: $theme-color;
+    }
+
+    .insight-left-box {
+      @extend %border-setting;
+      width: 820px;
+      height: 100%;
+      background-color: #fff;
+      padding: 20px 40px;
+    }
+
+    .click-number-title {
+      @extend %flex-start;
+      height: 90px;
+      width: 100%;
+
+      h4 {
+        font-size: 20px;
+      }
+
+      .click-period {
+        font-size: 16px;
+        padding-left: 14px;
+        margin-top: 3px;
+        font-weight: 300;
+        color: #888;
+      }
+    }
+
+    .click-number-chart {
+      width: 738px;
+      height: 404px;
+
+      margin-bottom: 10px;
+    }
+
+    .ratio-chart-title {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .ratio-chart {
+      @extend %flex-between;
+
+      width: 738px;
+      height: 274px;
+
+      .ratio-chart-1 {
+        width: 470px;
+        height: 100%;
+      }
+
+      .ratio-chart-2 {
+        width: 738px - 470px;
+        height: 100%;
+      }
+
+    .insight-right-box {
+      @extend %border-setting;
+      width: 300px;
+      height: 100%;
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    .detail-rank-title {
+      height: 90px;
+
+      h4 {
+        margin: 0;
+      }
+      .click-period {
+        font-size: 16px;
+        margin-top: 5px;
+        font-weight: 300;
+        color: #888;
+      }
+    }
+  }
 }

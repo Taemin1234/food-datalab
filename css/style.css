@@ -1,3 +1,68 @@
+header .nav-top-wrap .nav-left, header .nav-bottom .tab_admenu ul, .sec-1 .title-wrap, .sec-1 .select-wrap .option-select, .sec-1 .insight-box-wrap .click-number-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.sec-1 .rank-wrap .btn-other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.sec-1 .select-wrap, .sec-1 .select-wrap .option-select .select-type ul, .sec-1 .insight-box-wrap, .sec-1 .insight-box-wrap .ratio-chart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.sec-1 .select-wrap .option-select textarea, .sec-1 .rank-wrap .region, .sec-1 .index-box-wrap, .sec-1 .insight-box-wrap .insight-left-box, .sec-1 .insight-box-wrap .insight-right-box {
+  border: solid 1px #c3cbd7;
+  border-radius: 3px;
+}
+
 body {
   margin-left: 0px;
   margin-top: 0px;
@@ -44,7 +109,7 @@ a:visited {
 }
 
 a:link {
-  color: #fff;
+  color: #ffffff;
 }
 
 ul,
@@ -84,7 +149,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 3px;
   max-width: 165px;
-  background-color: #fff;
+  background-color: #ffffff;
   margin-right: 5px;
 }
 
@@ -99,74 +164,19 @@ button {
   cursor: pointer;
 }
 
-header .nav-top-wrap .nav-left,
-header .nav-top-wrap .nav-right, header .nav-bottom .tab_admenu ul, .sec-1 .title-wrap, .sec-1 .select-wrap .option-select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.sec-1 .rank-wrap .btn-other {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-header .nav-top-wrap .nav-top, .sec-1 .select-wrap, .sec-1 .select-wrap .option-select .select-type ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+.active {
+  border-bottom: solid 2px #f76d00;
+  color: #f76d00;
 }
 
 header .nav-top-wrap {
-  background-color: #333333;
-  color: #fff;
+  background-color: #f76d00;
+  color: #ffffff;
+  border-bottom: 1px solid #f36c06;
 }
 
 header .nav-top-wrap a {
-  color: #fff;
+  color: #ffffff;
 }
 
 header .nav-top-wrap .nav-top {
@@ -176,6 +186,12 @@ header .nav-top-wrap .nav-top {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0px auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+header .nav-top-wrap .nav-left {
+  height: 100%;
 }
 
 header .nav-top-wrap .content-bar {
@@ -184,18 +200,20 @@ header .nav-top-wrap .content-bar {
 
 header .nav-top-wrap .admin-logo {
   font-size: 16px;
-  color: #fff;
-  margin-right: 12px;
+  color: #ffffff;
+  margin-right: 10px;
+  padding-top: 7px;
 }
 
 header .nav-top-wrap .nav-datalab {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 header .nav-bottom {
-  background-color: #1d2427;
-  color: #9e9d9d;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8dee4;
+  color: #000;
 }
 
 header .nav-bottom .menu {
@@ -217,28 +235,35 @@ header .nav-bottom .tab_admenu ul {
 
 header .nav-bottom .tab_admenu li {
   height: 100%;
-  padding: 12px 15px 10px;
-  font-size: 13px;
-  border-left: 1px solid #3d494e;
+  padding: 12px 0;
+  margin-right: 12px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-header .nav-bottom .tab_admenu li:last-child {
-  border-right: 1px solid #3d494e;
+header .nav-bottom .tab_admenu .menu {
+  display: block;
+  height: 100%;
 }
 
 .sec-1 {
   padding: 44px 0 46px;
 }
 
+.sec-1 .title-wrap {
+  border-bottom: 2px solid #c3cbd7;
+}
+
 .sec-1 .datalab-title {
   font-size: 24px;
   font-weight: bold;
+  margin-right: 20px;
+  margin-bottom: -1px;
+  padding-bottom: 10px;
 }
 
 .sec-1 .datalab-subtitle {
   font-size: 14px;
-  padding-top: 10px;
-  margin-left: 7px;
 }
 
 .sec-1 .select-wrap {
@@ -269,13 +294,13 @@ header .nav-bottom .tab_admenu li:last-child {
   left: 0;
   height: 18px;
   width: 18px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #ffffff;
+  border: 1px solid #c3cbd7;
   border-radius: 50%;
 }
 
 .sec-1 .select-wrap .option-select .container-radio:hover input ~ .checkmark {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .sec-1 .select-wrap .option-select .container-radio input:checked ~ .checkmark {
@@ -305,7 +330,6 @@ header .nav-bottom .tab_admenu li:last-child {
 .sec-1 .select-wrap .option-select textarea {
   width: 100%;
   padding: 16px;
-  border: 1px solid #e4e8eb;
   background-color: #f9f9f9;
   height: 200px;
   resize: none;
@@ -324,7 +348,8 @@ header .nav-bottom .tab_admenu li:last-child {
   height: 30px;
   padding-top: 3px;
   margin: 0 10px;
-  font-weight: bolder;
+  opacity: 0.5;
+  font-weight: bold;
 }
 
 .sec-1 .rank-wrap {
@@ -336,9 +361,7 @@ header .nav-bottom .tab_admenu li:last-child {
   height: 445px;
   padding: 0 10px 18px;
   margin: 0 5px;
-  background-color: #fff;
-  border: solid 1px #c3cbd7;
-  border-radius: 3px;
+  background-color: #ffffff;
 }
 
 .sec-1 .rank-wrap .region-title {
@@ -363,36 +386,26 @@ header .nav-bottom .tab_admenu li:last-child {
 }
 
 .sec-1 .rank-wrap .food-rank li span {
+  display: inline-block;
+  width: 23px;
+  margin-right: 5px;
   color: #f76d00;
 }
 
-.sec-1 .rank-wrap .food-rank .slick-arrow {
-  position: absolute;
-  top: 334px;
-  width: 10px;
-  height: 10px;
-  font-size: 0;
-  color: transparent;
-  border: solid 2px #929292;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.sec-1 .rank-wrap .btn-other {
+  height: 20px;
+  margin-bottom: 5px;
+  margin-right: 12px;
 }
 
-.sec-1 .rank-wrap .food-rank .slick-prev {
-  left: 196px;
-  border-top: none;
-  border-right: none;
-}
-
-.sec-1 .rank-wrap .food-rank .slick-next {
-  right: -19px;
-  border-bottom: none;
-  border-left: none;
+.sec-1 .rank-wrap .btn-other i {
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .sec-1 .rank-wrap .btn-other p {
-  font-size: 13px;
-  margin: 10px 16px 10px 10px;
+  font-size: 15px;
+  margin: 10px;
 }
 
 .sec-1 .rank-wrap .slick-arrow {
@@ -422,8 +435,113 @@ header .nav-bottom .tab_admenu li:last-child {
   border-left: none;
 }
 
-.active {
-  background-color: #f76d00;
-  color: #ffffff;
+.sec-1 .index-box-wrap {
+  width: 100%;
+  height: 270px;
+  background-color: #fff;
+  margin: 30px 0;
 }
-/*# sourceMappingURL=style.css.map */
+
+.sec-1 .index-box-wrap .index-box {
+  padding: 20px;
+  width: 100%;
+  height: 209px;
+  border-bottom: solid 1px #c3cbd7;
+}
+
+.sec-1 .index-box-wrap .btn-submit {
+  display: block;
+  width: 100%;
+  height: 59px;
+  background-color: #edf0f5;
+  text-align: center;
+}
+
+.sec-1 .index-box-wrap .btn-submit span,
+.sec-1 .index-box-wrap .btn-submit i {
+  line-height: 59px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f76d00;
+}
+
+.sec-1 .insight-box-wrap {
+  width: 100%;
+  height: 880px;
+}
+
+.sec-1 .insight-box-wrap .clicked-food {
+  color: #f76d00;
+}
+
+.sec-1 .insight-box-wrap .insight-left-box {
+  width: 820px;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px 40px;
+}
+
+.sec-1 .insight-box-wrap .click-number-title {
+  height: 90px;
+  width: 100%;
+}
+
+.sec-1 .insight-box-wrap .click-number-title h4 {
+  font-size: 20px;
+}
+
+.sec-1 .insight-box-wrap .click-number-title .click-period {
+  font-size: 16px;
+  padding-left: 14px;
+  margin-top: 3px;
+  font-weight: 300;
+  color: #888;
+}
+
+.sec-1 .insight-box-wrap .click-number-chart {
+  width: 738px;
+  height: 404px;
+  margin-bottom: 10px;
+}
+
+.sec-1 .insight-box-wrap .ratio-chart-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.sec-1 .insight-box-wrap .ratio-chart {
+  width: 738px;
+  height: 274px;
+}
+
+.sec-1 .insight-box-wrap .ratio-chart .ratio-chart-1 {
+  width: 470px;
+  height: 100%;
+}
+
+.sec-1 .insight-box-wrap .ratio-chart .ratio-chart-2 {
+  width: 268px;
+  height: 100%;
+}
+
+.sec-1 .insight-box-wrap .insight-right-box {
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.sec-1 .insight-box-wrap .detail-rank-title {
+  height: 90px;
+}
+
+.sec-1 .insight-box-wrap .detail-rank-title h4 {
+  margin: 0;
+}
+
+.sec-1 .insight-box-wrap .detail-rank-title .click-period {
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: 300;
+  color: #888;
+}
