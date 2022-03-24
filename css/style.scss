@@ -33,6 +33,15 @@ $border-color: #c3cbd7;
   align-content: center;
 }
 
+%flex-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+
 %border-setting {
   border: solid 1px $border-color;
   border-radius: 3px;
@@ -79,7 +88,7 @@ a:visited {
 }
 
 a:link {
-  color: $main-color2;
+  // color: $main-color2;
 }
 
 ul,
@@ -200,7 +209,7 @@ header {
       li {
         height: 100%;
         padding: 12px 0;
-        margin-right: 12px;
+        margin-right: 20px;
         font-size: 14px;
         font-weight: 600;
       }
@@ -213,21 +222,22 @@ header {
   }
 }
 
-.sec-1 {
-  padding: 44px 0 46px;
+// 월간 식단 랭크 페이지
+.title-wrap {
+  @extend %flex-start;
+  border-bottom: 2px solid $border-color;
+}
 
-  .title-wrap {
-    @extend %flex-start;
-    border-bottom: 2px solid $border-color;
-  }
+.datalab-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-bottom: -1px;
+  padding-bottom: 10px;
+}
 
-  .datalab-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 20px;
-    margin-bottom: -1px;
-    padding-bottom: 10px;
-  }
+section {
+  padding: 34px 0 46px;
 
   .datalab-subtitle {
     font-size: 14px;
@@ -410,6 +420,10 @@ header {
     }
   }
 
+  .insight-content-wrap {
+    display: none;
+  }
+
   .index-box-wrap {
     @extend %border-setting;
     width: 100%;
@@ -460,8 +474,9 @@ header {
 
     .click-number-title {
       @extend %flex-start;
-      height: 90px;
+      height: 70px;
       width: 100%;
+      margin-bottom: 10px;
 
       h4 {
         font-size: 20px;
@@ -503,7 +518,7 @@ header {
         width: 738px - 470px;
         height: 100%;
       }
-
+    }
     .insight-right-box {
       @extend %border-setting;
       width: 300px;
@@ -513,9 +528,14 @@ header {
     }
 
     .detail-rank-title {
-      height: 90px;
+      height: 70px;
+    }
+
+    .rank-title-wrap {
+      margin-top: 10px;
 
       h4 {
+        font-size: 20px;
         margin: 0;
       }
       .click-period {
@@ -523,6 +543,41 @@ header {
         margin-top: 5px;
         font-weight: 300;
         color: #888;
+      }
+    }
+
+    .detail-rank {
+      h4 {
+        margin: 0 0 20px 0;
+      }
+
+      .btn-other {
+        @extend %flex-end;
+
+        p {
+          margin: 10px;
+        }
+      }
+    }
+
+    .rank-list {
+      margin-bottom: 25px;
+
+      li {
+        margin-bottom: 13px;
+      }
+
+      span {
+        display: inline-block;
+        width: 23px;
+        color: $theme-color;
+
+        margin-right: 5px;
+      }
+
+      .fa-solid {
+        font-size: 15px;
+        cursor: pointer;
       }
     }
   }

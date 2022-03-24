@@ -1,4 +1,4 @@
-header .nav-top-wrap .nav-left, header .nav-bottom .tab_admenu ul, .sec-1 .title-wrap, .sec-1 .select-wrap .option-select, .sec-1 .insight-box-wrap .click-number-title {
+header .nav-top-wrap .nav-left, header .nav-bottom .tab_admenu ul, .title-wrap, section .select-wrap .option-select, section .insight-box-wrap .click-number-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,7 +18,7 @@ header .nav-top-wrap .nav-left, header .nav-bottom .tab_admenu ul, .sec-1 .title
       align-content: center;
 }
 
-.sec-1 .rank-wrap .btn-other {
+section .rank-wrap .btn-other, section .insight-box-wrap .detail-rank .btn-other {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,7 +38,7 @@ header .nav-top-wrap .nav-left, header .nav-bottom .tab_admenu ul, .sec-1 .title
       align-content: center;
 }
 
-.sec-1 .select-wrap, .sec-1 .select-wrap .option-select .select-type ul, .sec-1 .insight-box-wrap, .sec-1 .insight-box-wrap .ratio-chart {
+section .select-wrap, section .select-wrap .option-select .select-type ul, section .insight-box-wrap, section .insight-box-wrap .ratio-chart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +58,7 @@ header .nav-top-wrap .nav-left, header .nav-bottom .tab_admenu ul, .sec-1 .title
       align-content: center;
 }
 
-.sec-1 .select-wrap .option-select textarea, .sec-1 .rank-wrap .region, .sec-1 .index-box-wrap, .sec-1 .insight-box-wrap .insight-left-box, .sec-1 .insight-box-wrap .insight-right-box {
+section .select-wrap .option-select textarea, section .rank-wrap .region, section .index-box-wrap, section .insight-box-wrap .insight-left-box, section .insight-box-wrap .insight-right-box {
   border: solid 1px #c3cbd7;
   border-radius: 3px;
 }
@@ -106,10 +106,6 @@ a {
 
 a:visited {
   text-decoration: none;
-}
-
-a:link {
-  color: #ffffff;
 }
 
 ul,
@@ -236,7 +232,7 @@ header .nav-bottom .tab_admenu ul {
 header .nav-bottom .tab_admenu li {
   height: 100%;
   padding: 12px 0;
-  margin-right: 12px;
+  margin-right: 20px;
   font-size: 14px;
   font-weight: 600;
 }
@@ -246,15 +242,11 @@ header .nav-bottom .tab_admenu .menu {
   height: 100%;
 }
 
-.sec-1 {
-  padding: 44px 0 46px;
-}
-
-.sec-1 .title-wrap {
+.title-wrap {
   border-bottom: 2px solid #c3cbd7;
 }
 
-.sec-1 .datalab-title {
+.datalab-title {
   font-size: 24px;
   font-weight: bold;
   margin-right: 20px;
@@ -262,19 +254,23 @@ header .nav-bottom .tab_admenu .menu {
   padding-bottom: 10px;
 }
 
-.sec-1 .datalab-subtitle {
+section {
+  padding: 34px 0 46px;
+}
+
+section .datalab-subtitle {
   font-size: 14px;
 }
 
-.sec-1 .select-wrap {
+section .select-wrap {
   margin: 30px 0;
 }
 
-.sec-1 .select-wrap .option-select {
+section .select-wrap .option-select {
   vertical-align: middle;
 }
 
-.sec-1 .select-wrap .option-select .container-radio {
+section .select-wrap .option-select .container-radio {
   display: block;
   position: relative;
   padding-left: 22px;
@@ -282,13 +278,13 @@ header .nav-bottom .tab_admenu .menu {
   font-size: 14px;
 }
 
-.sec-1 .select-wrap .option-select .container-radio input {
+section .select-wrap .option-select .container-radio input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.sec-1 .select-wrap .option-select .checkmark {
+section .select-wrap .option-select .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -299,26 +295,26 @@ header .nav-bottom .tab_admenu .menu {
   border-radius: 50%;
 }
 
-.sec-1 .select-wrap .option-select .container-radio:hover input ~ .checkmark {
+section .select-wrap .option-select .container-radio:hover input ~ .checkmark {
   background-color: #ffffff;
 }
 
-.sec-1 .select-wrap .option-select .container-radio input:checked ~ .checkmark {
+section .select-wrap .option-select .container-radio input:checked ~ .checkmark {
   border: 1px solid #f76d00;
   background-color: #f76d00;
 }
 
-.sec-1 .select-wrap .option-select .container-radio .checkmark:after {
+section .select-wrap .option-select .container-radio .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.sec-1 .select-wrap .option-select .container-radio input:checked ~ .checkmark:after {
+section .select-wrap .option-select .container-radio input:checked ~ .checkmark:after {
   display: block;
 }
 
-.sec-1 .select-wrap .option-select .container-radio .checkmark:after {
+section .select-wrap .option-select .container-radio .checkmark:after {
   top: 4px;
   left: 4px;
   width: 8px;
@@ -327,7 +323,7 @@ header .nav-bottom .tab_admenu .menu {
   background: white;
 }
 
-.sec-1 .select-wrap .option-select textarea {
+section .select-wrap .option-select textarea {
   width: 100%;
   padding: 16px;
   background-color: #f9f9f9;
@@ -335,15 +331,15 @@ header .nav-bottom .tab_admenu .menu {
   resize: none;
 }
 
-.sec-1 .select-wrap .option-select .select-type {
+section .select-wrap .option-select .select-type {
   padding: 5px;
 }
 
-.sec-1 .select-wrap .option-select .select-type li {
+section .select-wrap .option-select .select-type li {
   padding-right: 10px;
 }
 
-.sec-1 .select-wrap .option-select .option-content {
+section .select-wrap .option-select .option-content {
   color: #747272;
   height: 30px;
   padding-top: 3px;
@@ -352,11 +348,11 @@ header .nav-bottom .tab_admenu .menu {
   font-weight: bold;
 }
 
-.sec-1 .rank-wrap {
+section .rank-wrap {
   position: relative;
 }
 
-.sec-1 .rank-wrap .region {
+section .rank-wrap .region {
   width: 243px;
   height: 445px;
   padding: 0 10px 18px;
@@ -364,7 +360,7 @@ header .nav-bottom .tab_admenu .menu {
   background-color: #ffffff;
 }
 
-.sec-1 .rank-wrap .region-title {
+section .rank-wrap .region-title {
   width: 100%;
   height: 80px;
   font-size: 22px;
@@ -373,7 +369,7 @@ header .nav-bottom .tab_admenu .menu {
   border-bottom: solid 1px #c3cbd7;
 }
 
-.sec-1 .rank-wrap .food-rank {
+section .rank-wrap .food-rank {
   position: relative;
   width: 236px;
   height: 310px;
@@ -381,34 +377,34 @@ header .nav-bottom .tab_admenu .menu {
   padding: 0 10px;
 }
 
-.sec-1 .rank-wrap .food-rank li {
+section .rank-wrap .food-rank li {
   margin-top: 10px;
 }
 
-.sec-1 .rank-wrap .food-rank li span {
+section .rank-wrap .food-rank li span {
   display: inline-block;
   width: 23px;
   margin-right: 5px;
   color: #f76d00;
 }
 
-.sec-1 .rank-wrap .btn-other {
+section .rank-wrap .btn-other {
   height: 20px;
   margin-bottom: 5px;
   margin-right: 12px;
 }
 
-.sec-1 .rank-wrap .btn-other i {
+section .rank-wrap .btn-other i {
   cursor: pointer;
   font-size: 15px;
 }
 
-.sec-1 .rank-wrap .btn-other p {
+section .rank-wrap .btn-other p {
   font-size: 15px;
   margin: 10px;
 }
 
-.sec-1 .rank-wrap .slick-arrow {
+section .rank-wrap .slick-arrow {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -423,33 +419,37 @@ header .nav-bottom .tab_admenu .menu {
           transform: rotate(45deg);
 }
 
-.sec-1 .rank-wrap .slick-prev {
+section .rank-wrap .slick-prev {
   left: -74px;
   border-top: none;
   border-right: none;
 }
 
-.sec-1 .rank-wrap .slick-next {
+section .rank-wrap .slick-next {
   right: -74px;
   border-bottom: none;
   border-left: none;
 }
 
-.sec-1 .index-box-wrap {
+section .insight-content-wrap {
+  display: none;
+}
+
+section .index-box-wrap {
   width: 100%;
   height: 270px;
   background-color: #fff;
   margin: 30px 0;
 }
 
-.sec-1 .index-box-wrap .index-box {
+section .index-box-wrap .index-box {
   padding: 20px;
   width: 100%;
   height: 209px;
   border-bottom: solid 1px #c3cbd7;
 }
 
-.sec-1 .index-box-wrap .btn-submit {
+section .index-box-wrap .btn-submit {
   display: block;
   width: 100%;
   height: 59px;
@@ -457,40 +457,41 @@ header .nav-bottom .tab_admenu .menu {
   text-align: center;
 }
 
-.sec-1 .index-box-wrap .btn-submit span,
-.sec-1 .index-box-wrap .btn-submit i {
+section .index-box-wrap .btn-submit span,
+section .index-box-wrap .btn-submit i {
   line-height: 59px;
   font-size: 16px;
   font-weight: bold;
   color: #f76d00;
 }
 
-.sec-1 .insight-box-wrap {
+section .insight-box-wrap {
   width: 100%;
   height: 880px;
 }
 
-.sec-1 .insight-box-wrap .clicked-food {
+section .insight-box-wrap .clicked-food {
   color: #f76d00;
 }
 
-.sec-1 .insight-box-wrap .insight-left-box {
+section .insight-box-wrap .insight-left-box {
   width: 820px;
   height: 100%;
   background-color: #fff;
   padding: 20px 40px;
 }
 
-.sec-1 .insight-box-wrap .click-number-title {
-  height: 90px;
+section .insight-box-wrap .click-number-title {
+  height: 70px;
   width: 100%;
+  margin-bottom: 10px;
 }
 
-.sec-1 .insight-box-wrap .click-number-title h4 {
+section .insight-box-wrap .click-number-title h4 {
   font-size: 20px;
 }
 
-.sec-1 .insight-box-wrap .click-number-title .click-period {
+section .insight-box-wrap .click-number-title .click-period {
   font-size: 16px;
   padding-left: 14px;
   margin-top: 3px;
@@ -498,50 +499,83 @@ header .nav-bottom .tab_admenu .menu {
   color: #888;
 }
 
-.sec-1 .insight-box-wrap .click-number-chart {
+section .insight-box-wrap .click-number-chart {
   width: 738px;
   height: 404px;
   margin-bottom: 10px;
 }
 
-.sec-1 .insight-box-wrap .ratio-chart-title {
+section .insight-box-wrap .ratio-chart-title {
   font-size: 20px;
   margin-bottom: 15px;
 }
 
-.sec-1 .insight-box-wrap .ratio-chart {
+section .insight-box-wrap .ratio-chart {
   width: 738px;
   height: 274px;
 }
 
-.sec-1 .insight-box-wrap .ratio-chart .ratio-chart-1 {
+section .insight-box-wrap .ratio-chart .ratio-chart-1 {
   width: 470px;
   height: 100%;
 }
 
-.sec-1 .insight-box-wrap .ratio-chart .ratio-chart-2 {
+section .insight-box-wrap .ratio-chart .ratio-chart-2 {
   width: 268px;
   height: 100%;
 }
 
-.sec-1 .insight-box-wrap .insight-right-box {
+section .insight-box-wrap .insight-right-box {
   width: 300px;
   height: 100%;
   background-color: #fff;
   padding: 20px;
 }
 
-.sec-1 .insight-box-wrap .detail-rank-title {
-  height: 90px;
+section .insight-box-wrap .detail-rank-title {
+  height: 70px;
 }
 
-.sec-1 .insight-box-wrap .detail-rank-title h4 {
+section .insight-box-wrap .rank-title-wrap {
+  margin-top: 10px;
+}
+
+section .insight-box-wrap .rank-title-wrap h4 {
+  font-size: 20px;
   margin: 0;
 }
 
-.sec-1 .insight-box-wrap .detail-rank-title .click-period {
+section .insight-box-wrap .rank-title-wrap .click-period {
   font-size: 16px;
   margin-top: 5px;
   font-weight: 300;
   color: #888;
+}
+
+section .insight-box-wrap .detail-rank h4 {
+  margin: 0 0 20px 0;
+}
+
+section .insight-box-wrap .detail-rank .btn-other p {
+  margin: 10px;
+}
+
+section .insight-box-wrap .rank-list {
+  margin-bottom: 25px;
+}
+
+section .insight-box-wrap .rank-list li {
+  margin-bottom: 13px;
+}
+
+section .insight-box-wrap .rank-list span {
+  display: inline-block;
+  width: 23px;
+  color: #f76d00;
+  margin-right: 5px;
+}
+
+section .insight-box-wrap .rank-list .fa-solid {
+  font-size: 15px;
+  cursor: pointer;
 }
