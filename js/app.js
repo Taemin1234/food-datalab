@@ -1,3 +1,4 @@
+// 슬릭 슬라이더
 $(function () {
   $(".rank-wrap").slick({
     slidesToShow: 4,
@@ -13,9 +14,13 @@ $(function () {
   $(".datalab-title").click(function () {
     idx = $(this).index();
 
+    // 메뉴바 UI 변경
     $(".datalab-title").removeClass("active");
-
     $(".datalab-title").eq(idx).addClass("active");
+
+    // 필요화면 전환
+    $(".hide-contents").hide();
+    $(".hide-contents").eq(idx).show();
   });
 });
 
