@@ -1,4 +1,4 @@
-header .nav-top-wrap .nav-left, header .nav-bottom .tab_admenu ul, .title-wrap, section .select-wrap .option-select, section .insight-box-wrap .click-number-title {
+header .nav-top-wrap .nav-left, header .nav-bottom .tab_admenu ul, .title-wrap, section .select-wrap .option-select, section .index-box-wrap .index-row, section .index-box-wrap .period-input-btn, section .index-box-wrap .period-input, section .insight-box-wrap .click-number-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +58,7 @@ section .select-wrap, section .select-wrap .option-select .select-type ul, secti
       align-content: center;
 }
 
-section .select-wrap .option-select textarea, section .rank-wrap .region, section .index-box-wrap, section .insight-box-wrap .insight-left-box, section .insight-box-wrap .insight-right-box {
+section .select-wrap .option-select textarea, section .rank-wrap .region, section .index-box-wrap, section .index-box-wrap .period-input-btn, section .insight-box-wrap .insight-left-box, section .insight-box-wrap .insight-right-box {
   border: solid 1px #c3cbd7;
   border-radius: 3px;
 }
@@ -165,6 +165,11 @@ button {
   color: #f76d00;
 }
 
+.period-active {
+  background-color: #f76d00;
+  color: #ffffff;
+}
+
 header .nav-top-wrap {
   background-color: #f76d00;
   color: #ffffff;
@@ -262,6 +267,26 @@ section .datalab-subtitle {
   font-size: 14px;
 }
 
+section .option-content {
+  color: #747272;
+  height: 30px;
+  padding-top: 3px;
+  margin: 0 10px;
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+section .hypen {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  margin: 5px 15px;
+  vertical-align: 0px;
+  background-color: #747272;
+  opacity: 0.5;
+}
+
 section .select-wrap {
   margin: 30px 0;
 }
@@ -337,15 +362,6 @@ section .select-wrap .option-select .select-type {
 
 section .select-wrap .option-select .select-type li {
   padding-right: 10px;
-}
-
-section .select-wrap .option-select .option-content {
-  color: #747272;
-  height: 30px;
-  padding-top: 3px;
-  margin: 0 10px;
-  opacity: 0.5;
-  font-weight: bold;
 }
 
 section .rank-wrap {
@@ -443,10 +459,72 @@ section .index-box-wrap {
 }
 
 section .index-box-wrap .index-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
   padding: 20px;
   width: 100%;
   height: 209px;
   border-bottom: solid 1px #c3cbd7;
+}
+
+section .index-box-wrap .index-row {
+  height: 40px;
+  width: 100%;
+}
+
+section .index-box-wrap .index-row .index-title {
+  height: 100%;
+  margin-right: 20px;
+}
+
+section .index-box-wrap .index-row .index-title h4 {
+  height: 100%;
+  margin: 0;
+  line-height: 40px;
+}
+
+section .index-box-wrap .period-input-btn {
+  height: 100%;
+  width: 280px;
+  margin-right: 20px;
+}
+
+section .index-box-wrap .period-input-btn button {
+  height: 100%;
+  width: 25%;
+  border-right: solid 1px #c3cbd7;
+}
+
+section .index-box-wrap .period-input-btn button:last-child {
+  border: none;
+}
+
+section .index-box-wrap .period-input {
+  height: 100%;
+}
+
+section .index-box-wrap .start-date,
+section .index-box-wrap .end-date {
+  height: 100%;
+}
+
+section .index-box-wrap #select-year,
+section .index-box-wrap #select-month {
+  height: 100%;
 }
 
 section .index-box-wrap .btn-submit {
