@@ -21,15 +21,14 @@
     <!-- slick 슬라이더 js, cdn -->
     <script src="/slick-1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="/slick-1.8.1/slick/slick.css" />
-    <!-- <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+
+
+    <!-- 웹폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&Nanum+Gothic:wght@400;700&Roboto+Slab:wght@600&display=swap"
       rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    /> -->
+    />
 
     <!-- chart.js cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
