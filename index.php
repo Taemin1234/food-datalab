@@ -186,7 +186,65 @@
           <div class="index-box-wrap">
             <div class="index-box">
               <div class="index-row"></div>
-              <div class="index-row"></div>
+              <div class="index-row">
+                <div class="index-title">
+                  <h4>기간</h4>
+                </div>
+                <div class="period-input-btn">
+                  <button class="period-select period-active">1개월</button>
+                  <button class="period-3month">3개월</button>
+                  <button class="period-1year">1년</button>
+                  <button class="period-custom">직접입력</button>
+                </div>
+                <div class="period-input">
+                  <div class="start-date">
+                    <select name="start-year" id="select-year">
+                      <option value="2020">2020년</option>
+                      <option value="2021">2021년</option>
+                      <option value="2022">2022년</option>
+                    </select>
+                    <select name="start-month" id="select-month">
+                      <option value="01">1월</option>
+                      <option value="02">2월</option>
+                      <option value="03">3월</option>
+                      <option value="04">4월</option>
+                      <option value="05">5월</option>
+                      <option value="06">6월</option>
+                      <option value="07">7월</option>
+                      <option value="08">8월</option>
+                      <option value="09">9월</option>
+                      <option value="10">10월</option>
+                      <option value="11">11월</option>
+                      <option value="12">12월</option>
+                    </select>
+                  </div>
+
+                  <span class="hypen"> </span>
+
+                  <div class="end-date">
+                    <select name="end-year" id="select-year">
+                      <option value="2020">2020년</option>
+                      <option value="2021">2021년</option>
+                      <option value="2022">2022년</option>
+                    </select>
+                    <select name="end-month" id="select-month">
+                      <option value="01">1월</option>
+                      <option value="02">2월</option>
+                      <option value="03">3월</option>
+                      <option value="04">4월</option>
+                      <option value="05">5월</option>
+                      <option value="06">6월</option>
+                      <option value="07">7월</option>
+                      <option value="08">8월</option>
+                      <option value="09">9월</option>
+                      <option value="10">10월</option>
+                      <option value="11">11월</option>
+                      <option value="12">12월</option>
+                      <option value="13" hidden>1월</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
               <div class="index-row"></div>
             </div>
             <a href="#" class="btn-submit">
