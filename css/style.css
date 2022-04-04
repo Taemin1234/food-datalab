@@ -38,7 +38,7 @@ section .rank-wrap .btn-other, section .insight-box-wrap .detail-rank .btn-other
       align-content: center;
 }
 
-section .select-wrap, section .select-wrap .option-select .select-type ul, section .insight-box-wrap, section .insight-box-wrap .ratio-chart {
+section .select-wrap, section .select-wrap .option-select .select-type ul, section .insight-box-wrap, section .insight-box-wrap .ratio-chart, section .insight-box-wrap .detail-rank-top, section .insight-box-wrap .rank-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +58,7 @@ section .select-wrap, section .select-wrap .option-select .select-type ul, secti
       align-content: center;
 }
 
-section .select-wrap .option-select textarea, section .rank-wrap .region, section .index-box-wrap, section .index-box-wrap .period-input-btn, section .insight-box-wrap .insight-left-box, section .insight-box-wrap .insight-right-box {
+section .select-wrap .option-select textarea, section .select-wrap .option-select .btn-search, section .rank-wrap .region, section .index-box-wrap, section .index-box-wrap .period-input-btn, section .insight-box-wrap .insight-left-box, section .insight-box-wrap .insight-right-box {
   border: solid 1px #c3cbd7;
   border-radius: 3px;
 }
@@ -102,6 +102,7 @@ a {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   color: inherit;
+  cursor: pointer;
 }
 
 a:visited {
@@ -362,6 +363,23 @@ section .select-wrap .option-select .select-type {
 
 section .select-wrap .option-select .select-type li {
   padding-right: 10px;
+}
+
+section .select-wrap .option-select .btn-search {
+  background-color: #ffffff;
+  width: 48px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+section .select-wrap .option-select .btn-search button {
+  width: 100%;
+  height: 100%;
+}
+
+section .select-wrap .option-select .btn-search:hover {
+  background-color: #c3cbd7;
 }
 
 section .rank-wrap {
@@ -630,12 +648,24 @@ section .insight-box-wrap .rank-title-wrap .click-period {
   color: #888;
 }
 
-section .insight-box-wrap .detail-rank h4 {
+section .insight-box-wrap .detail-rank .btn-other p {
+  margin: 10px;
+}
+
+section .insight-box-wrap .detail-rank-top {
+  height: 25px;
   margin: 0 0 20px 0;
 }
 
-section .insight-box-wrap .detail-rank .btn-other p {
-  margin: 10px;
+section .insight-box-wrap .detail-rank-top h4 {
+  height: 100%;
+}
+
+section .insight-box-wrap .detail-rank-top span {
+  color: grey;
+  opacity: 0.5;
+  font-size: 14px;
+  height: 100%;
 }
 
 section .insight-box-wrap .rank-list {
@@ -644,6 +674,11 @@ section .insight-box-wrap .rank-list {
 
 section .insight-box-wrap .rank-list li {
   margin-bottom: 13px;
+}
+
+section .insight-box-wrap .rank-list li p {
+  margin: 0;
+  font-size: 14px;
 }
 
 section .insight-box-wrap .rank-list span {
