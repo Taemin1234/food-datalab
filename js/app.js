@@ -35,6 +35,15 @@ $(function () {
   });
 });
 
+//인사이트 내 오른쪽 랭킹의 메뉴를 클릭하면 왼쪽 차트 음식이름이 바뀜
+
+$(function () {
+  $(".rank-list a").on("click", ".rank-list-name", function () {
+    var a = $(this).text();
+    $(".left-clicked-food").text(a);
+  });
+});
+
 // 클릭량 추이 선차트
 
 $(function () {
@@ -43,6 +52,8 @@ $(function () {
     data: {
       //x축 목록
       labels: [
+        21.04,
+        21.05,
         21.06,
         21.07,
         21.08,
@@ -57,7 +68,7 @@ $(function () {
       // y축 값
       datasets: [
         {
-          data: [70, 60, 50, 55, 80, 100, 84, 74, 100, 94],
+          data: [70, 60, 50, 55, 80, 61, 100, 84, 74, 56, 94, 89],
           label: "Pork cutlet",
           borderColor: "#f76d00",
           fill: false,
