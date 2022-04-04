@@ -315,7 +315,10 @@
                     <!-- 선택된 카테고리 내 세부 메뉴 순위를 보여주세요 -->
                     <?php for($j=0; $j<20; $j++) { ?>
                     <li>
-                      <a herf="#"><span>15 </span>소불고기</a>
+                      <a herf="#">
+                        <span>15 </span>
+                        <span class="rank-list-name">소불고기</span>
+                      </a>
                       <p class="view-count">999</p>
                     </li>
                     <?php } ?>
