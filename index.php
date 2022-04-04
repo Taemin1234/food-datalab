@@ -7,7 +7,7 @@
         <div class="nav-top">
           <div class="nav-left">
             <p class="admin-logo"><a href="#">월간식단연구소</a></p>
-            <p class="nav-datalab">Data Lab.</p>
+            <p class="nav-datalab"><a href="/">Data Lab.</a></p>
           </div>
         </div>
       </nav>
@@ -35,9 +35,11 @@
     <main>
       <section class="sec-1">
         <div class="title-wrap">
-          <div class="datalab-title active"><a href="#">식단 랭킹</a></div>
+          <div class="datalab-title active"><a href="#">식단 선호도</a></div>
           <div class="datalab-title"><a href="#">식단 인사이트</a></div>
         </div>
+
+        <!-- 식단랭킹 파트 --> 
         <div class="rank-content-wrap hide-contents">
           <p class="datalab-subtitle">
             식단별 클릭 추이와 분야별 검색어 현황을 확인 할수 있습니다.
@@ -153,35 +155,36 @@
           </div>
 
           <!-- 전국포함 17개 교육청 데이터가 보여지게 해주세요 -->
-        <div class="rank-wrap">
+          <div class="rank-wrap">
 
           <!-- 교육청 반복 -->
-          <?php for($i=0; $i<18; $i++) { ?>
-          <div class="region">
-            <div class="region-title">전국</div>
-            <!-- 각 교육청 내 순위도 버튼을 누르면 바뀔 수 있게 해주세요 -->
-            <div class="food-rank">
-              <ul>
-                <!-- 순위 반복 -->
-                <?php for($j=0; $j<10; $j++) { ?>
-                <li><a herf="#"><span>10 </span>스파게티</a></li>
-                <?php } ?>
-              </ul>
+            <?php for($i=0; $i<18; $i++) { ?>
+            <div class="region">
+              <div class="region-title">전국</div>
+              <!-- 각 교육청 내 순위도 버튼을 누르면 바뀔 수 있게 해주세요 -->
+              <div class="food-rank">
+                <ul>
+                  <!-- 순위 반복 -->
+                  <?php for($j=0; $j<10; $j++) { ?>
+                  <li><a herf="#"><span>10 </span>스파게티</a></li>
+                  <?php } ?>
+                </ul>
+              </div>
+              <div class="btn-other">
+                <i class="fa-solid fa-angle-left"></i>
+                <p><span>1</span>/20</p>
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
             </div>
-            <div class="btn-other">
-              <i class="fa-solid fa-angle-left"></i>
-              <p><span>1</span>/20</p>
-              <i class="fa-solid fa-angle-right"></i>
-            </div>
+            <?php } ?>          
           </div>
-          <?php } ?>
-          
         </div>
-        </div>
+
+        <!-- 인사이트 부분 -->
         <div class="insight-content-wrap hide-contents">
           <p class="datalab-subtitle">
-            다양한 분야에서 클릭이 발생한 검색어의 클릭량 추이 및 연령별/성별
-            정보를 상세하게 조회할 수 있습니다.
+            다양한 분야에서 레시피의 클릭량 추이 및 연령별/성별 정보를 상세하게
+            조회할 수 있습니다.
           </p>
           <div class="index-box-wrap">
             <div class="index-box">
@@ -191,10 +194,10 @@
                   <h4>기간</h4>
                 </div>
                 <div class="period-input-btn">
-                  <button class="period-select period-active">1개월</button>
+                  <button class="period-select">1개월</button>
                   <button class="period-3month">3개월</button>
                   <button class="period-1year">1년</button>
-                  <button class="period-custom">직접입력</button>
+                  <button class="period-custom period-active">직접입력</button>
                 </div>
                 <div class="period-input">
                   <div class="start-date">
@@ -240,7 +243,6 @@
                       <option value="10">10월</option>
                       <option value="11">11월</option>
                       <option value="12">12월</option>
-                      <option value="13" hidden>1월</option>
                     </select>
                   </div>
                 </div>
@@ -254,11 +256,21 @@
           </div>
 
           <div class="insight-box-wrap">
+
+            <!-- 왼쪽 차트 -->
             <div class="insight-left-box">
               <div class="click-number-wrap">
                 <div class="click-number-title">
-                  <h4><span class="clicked-food">돈까스 </span>클릭량 추이</h4>
-                  <span class="click-period">2022.02 ~ 2022.03</span>
+                  <h4><span class="clicked-food">돈까스 </span>선호도 추이</h4>
+                  <span class="click-period">
+                    <span class="start-year">2022</span>
+                    .
+                    <span class="start-month">02</span>
+                    ~
+                    <span class="end-year">2022</span>
+                    .
+                    <span class="end-month">02</span>
+                  </span>
                 </div>
                 <div class="click-number-chart">
                   <canvas id="line-chart"></canvas>
@@ -276,20 +288,36 @@
                 </div>
               </div>
             </div>
+
+            <!-- 오른쪽 순위 -->
             <div class="insight-right-box">
               <div class="detail-rank-title">
                 <div class="rank-title-wrap">
                   <h4><span class="clicked-food">돈까스 </span>클릭량 추이</h4>
-                  <span class="click-period">2022.02 ~ 2022.03</span>
+                  <span class="click-period">
+                    <span class="start-year">2022</span>
+                    .
+                    <span class="start-month">02</span>
+                    ~
+                    <span class="end-year">2022</span>
+                    .
+                    <span class="end-month">02</span>
+                  </span>
                 </div>
               </div>
               <div class="detail-rank">
-                <h4><strong>TOP 500</strong></h4>
+                <div class="detail-rank-top">
+                  <h4><strong>TOP 500</strong></h4>
+                  <span>조회수</span>
+                </div>
                 <div class="rank-list">
                   <ul>
-                      <!-- 순위 반복 -->
-                    <?php for($j=0; $j<10; $j++) { ?>
-                    <li><a herf="#"><span>15 </span>소불고기</a></li>
+                    <!-- 선택된 카테고리 내 세부 메뉴 순위를 보여주세요 -->
+                    <?php for($j=0; $j<20; $j++) { ?>
+                    <li>
+                      <a herf="#"><span>15 </span>소불고기</a>
+                      <p class="view-count">999</p>
+                    </li>
                     <?php } ?>
                   </ul>
                 </div>
