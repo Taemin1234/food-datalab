@@ -24,7 +24,18 @@ $(function () {
   });
 });
 
-//  클릭량 추이 선차트
+// 교육청 내 메뉴 클릭 시 인사이트로 넘어가기
+$(function () {
+  $(".food-rank li").click(function () {
+    $(".datalab-title").eq(0).removeClass("active");
+    $(".datalab-title").eq(1).addClass("active");
+
+    $(".hide-contents").eq(0).hide();
+    $(".hide-contents").eq(1).show();
+  });
+});
+
+// 클릭량 추이 선차트
 
 $(function () {
   new Chart(document.getElementById("line-chart"), {
@@ -247,7 +258,7 @@ $(function () {
       }
     }
 
-    //연도 설정
+    //3개월 연도 설정
     for (var i = 0; i < ".end-date #select-year option".length; i++) {
       if (
         parseInt($(".start-date #select-year option").eq(i).val()) == year3m
@@ -277,7 +288,7 @@ $(function () {
       }
     }
 
-    //연도설정
+    //1개월 연도설정
     for (var i = 0; i < ".end-date #select-year option".length; i++) {
       if ($(".end-date #select-year option").eq(i).val() == year) {
         $(".end-date #select-year option").eq(i).prop("selected", true);
@@ -308,7 +319,7 @@ $(function () {
       }
     }
 
-    //년도 설정
+    //1년의 연도 설정
 
     for (var i = 0; i < ".end-date #select-year option".length; i++) {
       if (
