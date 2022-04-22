@@ -83,7 +83,7 @@
                   </li>
                   <li>
                     <label class="container-radio"
-                      >부식
+                      >후식
                       <input type="radio" name="food-type" value="dessert" />
                       <span class="checkmark"></span>
                     </label>
